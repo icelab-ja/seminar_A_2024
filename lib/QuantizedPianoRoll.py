@@ -861,7 +861,7 @@ class Qpr:
         return np.array(meters)
 
     def get_stime_to_spqn(self):
-        spqns = self.SPQNs + [SPQNEvt(self.get_last_stime(), 0)]
+        spqns = self.SPQNs + [SPQNEvt(self.get_last_stime(), 0, 0)]
         spqns = [[si.value] * (sj.stime - si.stime)
                  for si, sj in sliding_window(2, spqns)]
 
